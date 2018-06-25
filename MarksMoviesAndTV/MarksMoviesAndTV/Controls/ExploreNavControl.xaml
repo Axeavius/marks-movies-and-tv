@@ -1,0 +1,67 @@
+﻿<UserControl
+    x:Class="MarksMoviesAndTV.Controls.ExploreNavControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="80"
+    d:DesignWidth="1344"
+    mc:Ignorable="d">
+
+    <Grid Background="#121212">
+        <Grid MaxWidth="1344">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="TrailersTab"
+                Grid.Column="0"
+                Click="TrailersTab_Click"
+                Style="{StaticResource ExploreNavButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../Assets/glyphs/explore-page-nav-button_trailers.png" Style="{StaticResource ExploreNavButtonImageStyle}" />
+                    <TextBlock Style="{StaticResource ExploreNavButtonTextBlockStyle}" Text="Trailers" />
+                </StackPanel>
+            </Button>
+            <Rectangle Grid.Column="1" Style="{StaticResource ExploreNavButtonSeparatorStyle}" />
+            <Button
+                x:Name="Videos360Tab"
+                Grid.Column="2"
+                Click="Videos360Tab_Click"
+                Style="{StaticResource ExploreNavButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../Assets/glyphs/explore-page-nav-button_360-videos.png" Style="{StaticResource ExploreNavButtonImageStyle}" />
+                    <TextBlock Style="{StaticResource ExploreNavButtonTextBlockStyle}" Text="360&#176; videos" />
+                </StackPanel>
+            </Button>
+            <Rectangle Grid.Column="3" Style="{StaticResource ExploreNavButtonSeparatorStyle}" />
+            <Button
+                x:Name="MoviesTab"
+                Grid.Column="4"
+                Click="MoviesTab_Click"
+                Style="{StaticResource ExploreNavButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../Assets/glyphs/explore-page-nav-button_movies.png" Style="{StaticResource ExploreNavButtonImageStyle}" />
+                    <TextBlock Style="{StaticResource ExploreNavButtonTextBlockStyle}" Text="Movies" />
+                </StackPanel>
+            </Button>
+            <Rectangle Grid.Column="5" Style="{StaticResource ExploreNavButtonSeparatorStyle}" />
+            <Button
+                x:Name="TVTab"
+                Grid.Column="6"
+                Click="TVTab_Click"
+                Style="{StaticResource ExploreNavButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../Assets/glyphs/explore-page-nav-button_tv-shows.png" Style="{StaticResource ExploreNavButtonImageStyle}" />
+                    <TextBlock Style="{StaticResource ExploreNavButtonTextBlockStyle}" Text="TV" />
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

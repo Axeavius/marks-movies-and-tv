@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{E161ACBD-DF5E-4E41-AED0-2AC40F7D8D65}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MarksMoviesAndTV</RootNamespace>
+    <AssemblyName>MarksMoviesAndTV</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>MarksMoviesAndTV_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\PersonalVideo.cs" />
+    <Compile Include="Classes\PurchasedVideo.cs" />
+    <Compile Include="Classes\TVShow.cs" />
+    <Compile Include="Classes\Movie.cs" />
+    <Compile Include="Controls\PersonalNavControl.xaml.cs">
+      <DependentUpon>PersonalNavControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ExploreNavControl.xaml.cs">
+      <DependentUpon>ExploreNavControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TopNavControl.xaml.cs">
+      <DependentUpon>TopNavControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FooterControl.xaml.cs">
+      <DependentUpon>FooterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SpotlightControl.xaml.cs">
+      <DependentUpon>SpotlightControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExplorePageL2_360VideosPage.xaml.cs">
+      <DependentUpon>ExplorePageL2_360VideosPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExplorePage.xaml.cs">
+      <DependentUpon>ExplorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExplorePageL2_MoviesPage.xaml.cs">
+      <DependentUpon>ExplorePageL2_MoviesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExplorePageL2_TrailersPage.xaml.cs">
+      <DependentUpon>ExplorePageL2_TrailersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExplorePageL2_TVPage.xaml.cs">
+      <DependentUpon>ExplorePageL2_TVPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PersonalPage.xaml.cs">
+      <DependentUpon>PersonalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchasedPage.xaml.cs">
+      <DependentUpon>PurchasedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ExplorePageL2_360VideosPageViewModel.cs" />
+    <Compile Include="ViewModels\ExplorePageL2_MoviesPageViewModel.cs" />
+    <Compile Include="ViewModels\ExplorePageL2_TVPageViewModel.cs" />
+    <Compile Include="ViewModels\ExplorePageL2_TrailersPageViewModel.cs" />
+    <Compile Include="ViewModels\PersonalPageViewModel.cs" />
+    <Compile Include="ViewModels\PurchasedPageViewModel.cs" />
+    <Compile Include="ViewModels\ExplorePageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="MarksMoviesAndTV_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\boxart\360-videos\amazing-china.png" />
+    <Content Include="Assets\boxart\360-videos\asteroids-sneak-peek.png" />
+    <Content Include="Assets\boxart\360-videos\capturing-everest.png" />
+    <Content Include="Assets\boxart\360-videos\dreams-of-o-teaser.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-music-tko-bassnectar.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-chinese-lion-dance.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-danny-macaskill.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-inside-a-v8-supercar.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-jetpackman.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-land-air-and-sea.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-skydiving.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-swimming-with-wild-dolphins.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-the-carnival-mask-maker.png" />
+    <Content Include="Assets\boxart\360-videos\gopro-vr-wimbledon-experience.png" />
+    <Content Include="Assets\boxart\360-videos\iem-league-of-legends-1.png" />
+    <Content Include="Assets\boxart\360-videos\inside-the-box-of-kurios-teaser.png" />
+    <Content Include="Assets\boxart\360-videos\inspirational-1.png" />
+    <Content Include="Assets\boxart\360-videos\inspirational-2.png" />
+    <Content Include="Assets\boxart\360-videos\inspirational-3.png" />
+    <Content Include="Assets\boxart\360-videos\inspirational-4.png" />
+    <Content Include="Assets\boxart\360-videos\inspirational-5.png" />
+    <Content Include="Assets\boxart\360-videos\invasion.png" />
+    <Content Include="Assets\boxart\360-videos\rogue-one-in-360.png" />
+    <Content Include="Assets\boxart\360-videos\the-batmersive-vr-experience.png" />
+    <Content Include="Assets\boxart\360-videos\through-the-masks-of-luzia.png" />
+    <Content Include="Assets\boxart\movies\13-hours.png" />
+    <Content Include="Assets\boxart\movies\a-bad-moms-christmas.png" />
+    <Content Include="Assets\boxart\movies\a-thousand-junkies.png" />
+    <Content Include="Assets\boxart\movies\accident-man.png" />
+    <Content Include="Assets\boxart\movies\american-made.png" />
+    <Content Include="Assets\boxart\movies\avengers-infinity-war-trailer-2.png" />
+    <Content Include="Assets\boxart\movies\baby-driver.png" />
+    <Content Include="Assets\boxart\movies\blade-runner-2049.png" />
+    <Content Include="Assets\boxart\movies\bomb-city.png" />
+    <Content Include="Assets\boxart\movies\boo-2.png" />
+    <Content Include="Assets\boxart\movies\braven.png" />
+    <Content Include="Assets\boxart\movies\coco.png" />
+    <Content Include="Assets\boxart\movies\con-man.png" />
+    <Content Include="Assets\boxart\movies\daddys-home-2.png" />
+    <Content Include="Assets\boxart\movies\darkest-hour.png" />
+    <Content Include="Assets\boxart\movies\dc-5-film-collection.png" />
+    <Content Include="Assets\boxart\movies\dc-universe-3-film-collection.png" />
+    <Content Include="Assets\boxart\movies\dear-dictator.png" />
+    <Content Include="Assets\boxart\movies\demon-house.png" />
+    <Content Include="Assets\boxart\movies\despicable-me-3.png" />
+    <Content Include="Assets\boxart\movies\dirt-2017.png" />
+    <Content Include="Assets\boxart\movies\downsizing.png" />
+    <Content Include="Assets\boxart\movies\dunkirk.png" />
+    <Content Include="Assets\boxart\movies\father-figures.png" />
+    <Content Include="Assets\boxart\movies\geostorm.png" />
+    <Content Include="Assets\boxart\movies\happy-death-day.png" />
+    <Content Include="Assets\boxart\movies\harry-potter-3.png" />
+    <Content Include="Assets\boxart\movies\harry-potter-7-part-1.png" />
+    <Content Include="Assets\boxart\movies\harry-potter-7-part-2.png" />
+    <Content Include="Assets\boxart\movies\hellraiser-judgment.png" />
+    <Content Include="Assets\boxart\movies\honor-up.png" />
+    <Content Include="Assets\boxart\movies\i-kill-giants.png" />
+    <Content Include="Assets\boxart\movies\i-tonya.png" />
+    <Content Include="Assets\boxart\movies\immortal-demon-slayer.png" />
+    <Content Include="Assets\boxart\movies\insidious-4-movie-collection.png" />
+    <Content Include="Assets\boxart\movies\insidious.png" />
+    <Content Include="Assets\boxart\movies\it.png" />
+    <Content Include="Assets\boxart\movies\jigsaw.png" />
+    <Content Include="Assets\boxart\movies\jumanji-2-film-collection.png" />
+    <Content Include="Assets\boxart\movies\jumanji.png" />
+    <Content Include="Assets\boxart\movies\justice-league.png" />
+    <Content Include="Assets\boxart\movies\keep-watching.png" />
+    <Content Include="Assets\boxart\movies\kill-order.png" />
+    <Content Include="Assets\boxart\movies\kingsman-the-golden-circle.png" />
+    <Content Include="Assets\boxart\movies\lady-bird.png" />
+    <Content Include="Assets\boxart\movies\LBJ.png" />
+    <Content Include="Assets\boxart\movies\lego-batman-movie.png" />
+    <Content Include="Assets\boxart\movies\mad-max-fury-road.png" />
+    <Content Include="Assets\boxart\movies\murder-on-the-orient-express.png" />
+    <Content Include="Assets\boxart\movies\my-friend-dahmer.png" />
+    <Content Include="Assets\boxart\movies\only-the-brave.png" />
+    <Content Include="Assets\boxart\movies\pitch-perfect-3.png" />
+    <Content Include="Assets\boxart\movies\pitch-perfect-trilogy.png" />
+    <Content Include="Assets\boxart\movies\prodigy.png" />
+    <Content Include="Assets\boxart\movies\revenge-of-robert-the-doll.png" />
+    <Content Include="Assets\boxart\movies\san-andreas.png" />
+    <Content Include="Assets\boxart\movies\scorched-earth.png" />
+    <Content Include="Assets\boxart\movies\star-wars-2-film-collection.png" />
+    <Content Include="Assets\boxart\movies\star-wars-the-last-jedi.png" />
+    <Content Include="Assets\boxart\movies\still-born.png" />
+    <Content Include="Assets\boxart\movies\suicide-squad-hell-to-pay.png" />
+    <Content Include="Assets\boxart\movies\survivors-guide-to-prison.png" />
+    <Content Include="Assets\boxart\movies\the-dark-tower.png" />
+    <Content Include="Assets\boxart\movies\the-disaster-artist.png" />
+    <Content Include="Assets\boxart\movies\the-female-brain.png" />
+    <Content Include="Assets\boxart\movies\the-greatest-showman.png" />
+    <Content Include="Assets\boxart\movies\the-hitmans-bodyguard.png" />
+    <Content Include="Assets\boxart\movies\the-lodgers.png" />
+    <Content Include="Assets\boxart\movies\the-lullaby.png" />
+    <Content Include="Assets\boxart\movies\the-man-who-invented-christmas.png" />
+    <Content Include="Assets\boxart\movies\the-rape-of-recy-taylor.png" />
+    <Content Include="Assets\boxart\movies\the-redeemed-and-the-dominant.png" />
+    <Content Include="Assets\boxart\movies\the-square.png" />
+    <Content Include="Assets\boxart\movies\the-star.png" />
+    <Content Include="Assets\boxart\movies\thor.png" />
+    <Content Include="Assets\boxart\movies\three-billboards.png" />
+    <Content Include="Assets\boxart\movies\tilt.png" />
+    <Content Include="Assets\boxart\movies\tomb-raider-pre-order.png" />
+    <Content Include="Assets\boxart\movies\tragedy-girls.png" />
+    <Content Include="Assets\boxart\movies\victor-crowley.png" />
+    <Content Include="Assets\boxart\movies\war-for-the-planet-of-the-apes.png" />
+    <Content Include="Assets\boxart\movies\wonder-woman-2017.png" />
+    <Content Include="Assets\boxart\movies\wonder.png" />
+    <Content Include="Assets\boxart\personal\afx_saw-2015.png" />
+    <Content Include="Assets\boxart\personal\afx_saw-85-92.png" />
+    <Content Include="Assets\boxart\personal\afx_ventolin.png" />
+    <Content Include="Assets\boxart\personal\boc_campfire-headphase.png" />
+    <Content Include="Assets\boxart\personal\boc_music-has-the-right-to-children.png" />
+    <Content Include="Assets\boxart\personal\boc_tomorrows-harvest.png" />
+    <Content Include="Assets\boxart\personal\shobaleader_boiler-plate.png" />
+    <Content Include="Assets\boxart\personal\shobaleader_performing-squarepusher-theme.png" />
+    <Content Include="Assets\boxart\trailers\a-thousand-junkies.png" />
+    <Content Include="Assets\boxart\trailers\accident-man.png" />
+    <Content Include="Assets\boxart\trailers\bomb-city.png" />
+    <Content Include="Assets\boxart\trailers\boo-2.png" />
+    <Content Include="Assets\boxart\trailers\braven.png" />
+    <Content Include="Assets\boxart\trailers\coco.png" />
+    <Content Include="Assets\boxart\trailers\con-man.png" />
+    <Content Include="Assets\boxart\trailers\daddys-home-2.png" />
+    <Content Include="Assets\boxart\trailers\darkest-hour.png" />
+    <Content Include="Assets\boxart\trailers\dear-dictator.png" />
+    <Content Include="Assets\boxart\trailers\demon-house.png" />
+    <Content Include="Assets\boxart\trailers\dirt.png" />
+    <Content Include="Assets\boxart\trailers\disaster-artist.png" />
+    <Content Include="Assets\boxart\trailers\downsizing.png" />
+    <Content Include="Assets\boxart\trailers\father-figures.png" />
+    <Content Include="Assets\boxart\trailers\hellraiser-judgment.png" />
+    <Content Include="Assets\boxart\trailers\honor-up.png" />
+    <Content Include="Assets\boxart\trailers\i-kill-giants.png" />
+    <Content Include="Assets\boxart\trailers\i-tonya.png" />
+    <Content Include="Assets\boxart\trailers\immortal-demon-slayer.png" />
+    <Content Include="Assets\boxart\trailers\insidious.png" />
+    <Content Include="Assets\boxart\trailers\jumanji.png" />
+    <Content Include="Assets\boxart\trailers\justice-league.png" />
+    <Content Include="Assets\boxart\trailers\keep-watching.png" />
+    <Content Include="Assets\boxart\trailers\kill-order.png" />
+    <Content Include="Assets\boxart\trailers\LBJ.png" />
+    <Content Include="Assets\boxart\trailers\murder-on-the-orient-express.png" />
+    <Content Include="Assets\boxart\trailers\pitch-perfect-3.png" />
+    <Content Include="Assets\boxart\trailers\prodigy.png" />
+    <Content Include="Assets\boxart\trailers\revenge-of-robert-the-doll.png" />
+    <Content Include="Assets\boxart\trailers\scorched-earth.png" />
+    <Content Include="Assets\boxart\trailers\star-wars-the-last-jedi.png" />
+    <Content Include="Assets\boxart\trailers\still-born.png" />
+    <Content Include="Assets\boxart\trailers\suicide-squad-hell-to-pay.png" />
+    <Content Include="Assets\boxart\trailers\survivors-guide-to-prison.png" />
+    <Content Include="Assets\boxart\trailers\the-female-brain.png" />
+    <Content Include="Assets\boxart\trailers\the-greatest-showman.png" />
+    <Content Include="Assets\boxart\trailers\the-lodgers.png" />
+    <Content Include="Assets\boxart\trailers\the-lullaby.png" />
+    <Content Include="Assets\boxart\trailers\the-man-who-invented-christmas.png" />
+    <Content Include="Assets\boxart\trailers\the-rape-of-recy-taylor.png" />
+    <Content Include="Assets\boxart\trailers\the-redeemed-and-the-dominant.png" />
+    <Content Include="Assets\boxart\trailers\the-square.png" />
+    <Content Include="Assets\boxart\trailers\the-star.png" />
+    <Content Include="Assets\boxart\trailers\thor.png" />
+    <Content Include="Assets\boxart\trailers\three-billboards.png" />
+    <Content Include="Assets\boxart\trailers\tilt.png" />
+    <Content Include="Assets\boxart\trailers\tragedy-girls.png" />
+    <Content Include="Assets\boxart\trailers\victor-crowley.png" />
+    <Content Include="Assets\boxart\trailers\wonder.png" />
+    <Content Include="Assets\boxart\tv-shows\agents-of-shield.png" />
+    <Content Include="Assets\boxart\tv-shows\american-dad.png" />
+    <Content Include="Assets\boxart\tv-shows\arrow.png" />
+    <Content Include="Assets\boxart\tv-shows\atlanta.png" />
+    <Content Include="Assets\boxart\tv-shows\better-call-saul-1.png" />
+    <Content Include="Assets\boxart\tv-shows\better-call-saul-2.png" />
+    <Content Include="Assets\boxart\tv-shows\better-call-saul-3.png" />
+    <Content Include="Assets\boxart\tv-shows\big-bang-theory.png" />
+    <Content Include="Assets\boxart\tv-shows\blacklist.png" />
+    <Content Include="Assets\boxart\tv-shows\dragon-ball-super.png" />
+    <Content Include="Assets\boxart\tv-shows\forged-in-fire.png" />
+    <Content Include="Assets\boxart\tv-shows\game-of-thrones-1-7.png" />
+    <Content Include="Assets\boxart\tv-shows\game-of-thrones.png" />
+    <Content Include="Assets\boxart\tv-shows\ghost-adventures.png" />
+    <Content Include="Assets\boxart\tv-shows\gotham.png" />
+    <Content Include="Assets\boxart\tv-shows\impractical-jokers.png" />
+    <Content Include="Assets\boxart\tv-shows\izombie.png" />
+    <Content Include="Assets\boxart\tv-shows\krypton.png" />
+    <Content Include="Assets\boxart\tv-shows\naruto-shippuden-uncut.png" />
+    <Content Include="Assets\boxart\tv-shows\paw-patrol.png" />
+    <Content Include="Assets\boxart\tv-shows\portlandia.png" />
+    <Content Include="Assets\boxart\tv-shows\rick-and-morty-box-set.png" />
+    <Content Include="Assets\boxart\tv-shows\rick-and-morty.png" />
+    <Content Include="Assets\boxart\tv-shows\riverdale.png" />
+    <Content Include="Assets\boxart\tv-shows\rupaul-drag-race.png" />
+    <Content Include="Assets\boxart\tv-shows\shameless.png" />
+    <Content Include="Assets\boxart\tv-shows\south-park.png" />
+    <Content Include="Assets\boxart\tv-shows\spongebob-squarepants-11.png" />
+    <Content Include="Assets\boxart\tv-shows\supergirl.png" />
+    <Content Include="Assets\boxart\tv-shows\supernatural.png" />
+    <Content Include="Assets\boxart\tv-shows\the-alienist.png" />
+    <Content Include="Assets\boxart\tv-shows\the-flash-2014.png" />
+    <Content Include="Assets\boxart\tv-shows\the-good-doctor.png" />
+    <Content Include="Assets\boxart\tv-shows\the-magicians.png" />
+    <Content Include="Assets\boxart\tv-shows\the-simpsons.png" />
+    <Content Include="Assets\boxart\tv-shows\the-twilight-zone.png" />
+    <Content Include="Assets\boxart\tv-shows\the-walking-dead.png" />
+    <Content Include="Assets\boxart\tv-shows\vikings.png" />
+    <Content Include="Assets\default-images\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\default-images\SplashScreen.scale-200.png" />
+    <Content Include="Assets\default-images\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\default-images\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\default-images\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\default-images\StoreLogo.png" />
+    <Content Include="Assets\default-images\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\explore-page-movie-row_featured-collections.png" />
+    <Content Include="Assets\glyphs\explore-page-nav-button_360-videos.png" />
+    <Content Include="Assets\glyphs\explore-page-nav-button_movies.png" />
+    <Content Include="Assets\glyphs\explore-page-nav-button_trailers.png" />
+    <Content Include="Assets\glyphs\explore-page-nav-button_tv-shows.png" />
+    <Content Include="Assets\glyphs\personal-page-nav-button_media-servers.png" />
+    <Content Include="Assets\glyphs\personal-page-nav-button_removable-storage.png" />
+    <Content Include="Assets\glyphs\personal-page-nav-button_video-folders.png" />
+    <Content Include="Assets\megaman.gif" />
+    <Content Include="Assets\spotlight\a-wrinkle-in-time.png" />
+    <Content Include="Assets\spotlight\black-panther.png" />
+    <Content Include="Assets\spotlight\pacific-rim-uprising.png" />
+    <Content Include="Assets\spotlight\ready-player-one.png" />
+    <Content Include="Assets\spotlight\tomb-raider.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\PersonalNavControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ExploreNavControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TopNavControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FooterControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SpotlightControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ExplorePageL2_360VideosPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ExplorePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ExplorePageL2_MoviesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ExplorePageL2_TrailersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ExplorePageL2_TVPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PersonalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PurchasedPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.0.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

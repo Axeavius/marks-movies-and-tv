@@ -1,0 +1,56 @@
+﻿<UserControl
+    x:Class="MarksMoviesAndTV.Controls.PersonalNavControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="80"
+    d:DesignWidth="1344"
+    mc:Ignorable="d">
+
+    <Grid Background="#121212">
+        <Grid MaxWidth="1024">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button x:ConnectionId='1'
+                x:Name="VideoFoldersTab"
+                Grid.Column="0"
+                                             
+                Opacity="1"
+                Style="{StaticResource PersonalNavButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="25" Source="../Assets/glyphs/personal-page-nav-button_video-folders.png" Style="{StaticResource PersonalNavButtonImageStyle}" />
+                    <TextBlock Style="{StaticResource PersonalNavButtonTextBlockStyle}" Text="Video folders" />
+                </StackPanel>
+            </Button>
+            <Rectangle Grid.Column="1" Style="{StaticResource PersonalNavButtonSeparatorStyle}" />
+            <Button x:ConnectionId='2'
+                x:Name="RemovableStorageTab"
+                Grid.Column="2"
+                                                 
+                Style="{StaticResource PersonalNavButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="25" Source="../Assets/glyphs/personal-page-nav-button_removable-storage.png" Style="{StaticResource PersonalNavButtonImageStyle}" />
+                    <TextBlock Style="{StaticResource PersonalNavButtonTextBlockStyle}" Text="Removable storage" />
+                </StackPanel>
+            </Button>
+            <Rectangle Grid.Column="3" Style="{StaticResource PersonalNavButtonSeparatorStyle}" />
+            <Button x:ConnectionId='3'
+                x:Name="MediaServersTab"
+                Grid.Column="4"
+                                             
+                Style="{StaticResource PersonalNavButtonStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="25" Source="../Assets/glyphs/personal-page-nav-button_media-servers.png" Style="{StaticResource PersonalNavButtonImageStyle}" />
+                    <TextBlock Style="{StaticResource PersonalNavButtonTextBlockStyle}" Text="Media servers" />
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>
+

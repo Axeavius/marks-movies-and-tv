@@ -1,0 +1,42 @@
+﻿<UserControl
+    x:Class="MarksMoviesAndTV.Controls.FooterControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <Grid Margin="0,32">
+        <StackPanel HorizontalAlignment="Center">
+            <FontIcon
+                Margin="0,0,0,4"
+                HorizontalAlignment="Center"
+                FontFamily="Segoe MDL2 Assets"
+                FontSize="64"
+                Glyph="&#xE14D;" />
+            <TextBlock
+                FontSize="30"
+                FontWeight="Light"
+                Text="So much more to watch"
+                TextAlignment="Center" />
+            <TextBlock
+                FontSize="20"
+                FontWeight="Light"
+                Opacity="0.6"
+                Text="Choose from over half a million movies and TV shows in the Microsoft Store"
+                TextAlignment="Center" />
+            <Button x:ConnectionId='1'
+                x:Name="FooterShowMeMoreButton"
+                MinWidth="144"
+                Margin="0,24"
+                HorizontalAlignment="Center"
+                Background="{StaticResource SystemControlAccentDark1AcrylicWindowAccentDark1Brush}"
+                                            >
+                <TextBlock Text="Show me more" />
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

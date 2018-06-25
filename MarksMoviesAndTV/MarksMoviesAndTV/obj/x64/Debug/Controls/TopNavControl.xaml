@@ -1,0 +1,61 @@
+﻿<UserControl
+    x:Class="MarksMoviesAndTV.Controls.TopNavControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource CustomAcrylicBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+            <Button x:ConnectionId='3'
+                x:Name="ExploreTab"
+                                        
+                Content="Explore"
+                Style="{StaticResource TopNavHeaderButtonStyle}" />
+            <Button x:ConnectionId='4'
+                x:Name="PurchasedTab"
+                                          
+                Content="Purchased"
+                Style="{StaticResource TopNavHeaderButtonStyle}" />
+            <Button x:ConnectionId='5'
+                x:Name="PersonalTab"
+                                         
+                Content="Personal"
+                Style="{StaticResource TopNavHeaderButtonStyle}" />
+        </StackPanel>
+        <StackPanel Margin="0,0,11,0" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Style="{StaticResource TopNavIconButtonStyle}">
+                <FontIcon Glyph="&#xE11A;" />
+            </Button>
+            <Button Style="{StaticResource TopNavIconButtonStyle}">
+                <Grid CornerRadius="10">
+                    <Image
+                        Height="20"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Source="../Assets/megaman.gif" />
+                </Grid>
+            </Button>
+            <Button x:ConnectionId='1'                              Style="{StaticResource TopNavIconButtonStyle}">
+                <FontIcon Glyph="&#xE14D;" />
+            </Button>
+            <Button Style="{StaticResource TopNavIconButtonStyle}">
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem x:ConnectionId='2' MinWidth="160"                            Text="Settings" />
+                        <MenuFlyoutItem Text="Send feedback" />
+                    </MenuFlyout>
+                </Button.Flyout>
+                <FontIcon Glyph="&#xE10C;" />
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
+
